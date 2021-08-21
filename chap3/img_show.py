@@ -1,6 +1,6 @@
 import sys,os
 sys.path.append(os.pardir)
-from datasets.mnist import load_mnist
+import mnist
 import numpy as np
 from PIL import Image
 
@@ -8,7 +8,7 @@ def img_show(img):
     pil_img=Image.fromarray(np.uint(img))
     pil_img.show()
 
-(x_train, t_train), (x_test, t_test) =load_mnist(flatten=True,normalize=False)
+(x_train, t_train), (x_test, t_test) =mnist.load_mnist(flatten=True,normalize=False)
 
 img=x_train[0]
 label=t_train[0]
