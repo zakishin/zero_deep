@@ -1,8 +1,8 @@
 import sys,os
-sys.path.append('../chap3')
+sys.path.append(os.pardir)
 import numpy as np
 from cross_entropy_error import cross_entropy_error
-# from functions import sigmoid,softmax
+from chap3.functions import sigmoid,softmax
 # from gradient_method import numerical_gradient
 
 def sigmoid(x):
